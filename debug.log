@@ -4,3 +4,4 @@
 [1001/151952.113:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\amaan\AppData\Local\Microsoft\Edge Dev\User Data\Crashpad\attachments\bb953666-2f19-48b6-a7cd-5c0da1ae91a7: The system cannot find the path specified. (0x3)
 [1001/152643.016:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\amaan\AppData\Local\Microsoft\Edge Dev\User Data\Crashpad\attachments\f15aae38-f202-4d41-9ef3-878cb5f0db5b: The system cannot find the path specified. (0x3)
 [1001/153300.541:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\amaan\AppData\Local\Microsoft\Edge Dev\User Data\Crashpad\attachments\35c938a9-6e31-4632-9102-7d8f89c4ba36: The system cannot find the path specified. (0x3)
+[1003/150507.463:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
