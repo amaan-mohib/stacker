@@ -1,8 +1,8 @@
-### InFix Notation: A mathematical notation in which operators are placed between operands.
+### **InFix Notation:** A mathematical notation in which operators are placed between operands.
 
-### PreFix Notation: Also known as Polish Notation, is a mathematical notation in which operators precede their operands.
+### **PreFix Notation:** Also known as Polish Notation, is a mathematical notation in which operators precede their operands.
 
-### PostFix Notation: Also known as Reverse Polish Notation, is a mathematical notation in which operators follow their operands.
+### **PostFix Notation:** Also known as Reverse Polish Notation, is a mathematical notation in which operators follow their operands.
 
 Practically, these are used in calculators, as they increase the speed of calculations.
 
