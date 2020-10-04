@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### InFix Notation: A mathematical notation in which operators are placed between operands.
 
-## Available Scripts
+### PreFix Notation: Also known as Polish Notation, is a mathematical notation in which operators precede their operands.
 
-In the project directory, you can run:
+### PostFix Notation: Also known as Reverse Polish Notation, is a mathematical notation in which operators follow their operands.
 
-### `npm start`
+Practically, these are used in calculators, as they increase the speed of calculations.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Algorithms for conversion
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### InFix to PostFix conversion:
 
-### `npm test`
+1. Scan each element of the expression (X) from left to right and repeat steps 2 to 5 until the stack is empty.
+2. If an operand is encountered add it to the resultant string (Y).
+3. If a left parenthesis ( "(" ) is encountered then push it to the stack.
+4. If an operator is encountered then:
+   1. Repeatedly pop from stack and add it to Y which has the same or higher precedence than the next operator.
+   2. Push operator to the stack.
+5. If a right parenthesis is encountered then:
+   1. Repeatedly pop from the stack and to Y until a left parenthesis is encountered.
+   2. Pop the left parenthesis.
+6. END
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### InFix to PreFix conversion:
 
-### `npm run build`
+1. Scan the expression (X) and reverse it, also replace "(" to ")" and vice versa.
+2. Perform InFix to PostFix conversion on the reversed expression.
+3. Finally, reverse the obtained PostFix expression, resulting in the PreFix expression.
+4. END
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Algorithms for evaluations
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### PostFix evaluation:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Scan the expression (X) from left to right and repeat steps 2 to 4.
+2. If an operand is encountered then push the element to stack.
+3. If an operator is encountered then pop two operands and evaluate based on the operator.
+4. Push the answer to the stack.
+5. Finally, pop the element which is the answer.
+6. END
 
-### `npm run eject`
+### PreFix evaluation:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Scan the expression (X) and reverse it.
+2. Perform PostFix evaluation on the expression.
+3. The resulting value is the answer.
+4. END
